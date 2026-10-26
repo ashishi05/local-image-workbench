@@ -2405,7 +2405,7 @@ foreach ($label in $creationPage.Controls) {
     elseif ($label.Text -like '固定片段*') { $label.Top = 226 }
     elseif ($label.Text -like '负面提示词*') { $label.Top = 430 }
 }
-$fixedExtraGroups = @(
+$builtinExtraGroups = @(
     @{Key='count'; Name='人数'; Items=@(
         @{Label='单人'; Text='1girl, solo'},
         @{Label='双人'; Text='2girls'},
@@ -2534,6 +2534,27 @@ $fixedExtraGroups = @(
         @{Label='人鱼'; Text='mermaid, mermaid tail, fish tail, scales'}
     )}
 )
+
+# ---- 预设库：优先读取外部 JSON，直接编辑即可扩展，不必改脚本 ----
+$presetDataFile = Join-Path $AppDirectory '预设库.json'
+$fixedExtraGroups = @()
+if (Test-Path -LiteralPath $presetDataFile) {
+    try {
+        $presetData = Get-Content -LiteralPath $presetDataFile -Raw -Encoding UTF8 | ConvertFrom-Json
+        $loadedGroups = @(foreach ($g in @($presetData.groups)) {
+            if (-not $g -or -not $g.key -or -not $g.name) { continue }
+            $items = @(foreach ($it in @($g.items)) {
+                if (-not $it -or -not $it.text) { continue }
+                [pscustomobject]@{ Label = [string]$it.label; Text = [string]$it.text; Random = [bool]$it.random }
+            })
+            if ($items.Count -gt 0) { [pscustomobject]@{ Key = [string]$g.key; Name = [string]$g.name; Items = $items } }
+        })
+        if ($loadedGroups.Count -gt 0) { $fixedExtraGroups = $loadedGroups }
+    } catch {
+        [System.Windows.Forms.MessageBox]::Show('预设库.json 读取失败，已改用内置预设：' + $_.Exception.Message, '预设库') | Out-Null
+    }
+}
+if ($fixedExtraGroups.Count -eq 0) { $fixedExtraGroups = $builtinExtraGroups }
 foreach ($group in $fixedExtraGroups) {
     $group.Items = @($group.Items | Sort-Object { $_.Text })
 }
@@ -2797,7 +2818,10 @@ function New-FixedPresetGroups($hostPanel) {
         $null=$hostPanel.ColumnStyles.Add((New-Object System.Windows.Forms.ColumnStyle('Percent',(100.0/3))))
     }
     $sections = @()
-foreach ($group in @(@('style','画风'),@('character','人物'),@('expression','表情'),@('race','种族'),@('body','体型'),@('clothes','服装'),@('composition','构图'))) {
+    $groupDefs = New-Object System.Collections.Generic.List[object]
+    foreach ($pair in @(@('style','画风'),@('character','人物'),@('expression','表情'))) { $groupDefs.Add($pair) }
+    foreach ($g in $fixedExtraGroups) { $groupDefs.Add(@([string]$g.Key,[string]$g.Name)) }
+    foreach ($group in $groupDefs) {
         $choices = @($fixedChoices | Where-Object { $_.Key.StartsWith($group[0]+':') -and -not $_.Random })
         $panel = New-Object System.Windows.Forms.Panel
         $panel.Size = New-Object System.Drawing.Size(370,40)
@@ -3878,7 +3902,7 @@ $script:manualGalleryBrowse=$false; $script:lastFile=$null
     $testHost = New-Object System.Windows.Forms.TableLayoutPanel
     $testSections = @(New-FixedPresetGroups $testHost)
     try {
-        if ($testSections.Count -ne 7 -or @($testSections | Where-Object { $_.Expanded }).Count) { throw '分组没有默认收起。' }
+        if ($testSections.Count -ne (3 + @($fixedExtraGroups).Count) -or @($testSections | Where-Object { $_.Expanded }).Count) { throw '分组没有默认收起。' }
         $expression=$testSections[2]
         $expression.Header.PerformClick()
         if (-not $expression.Expanded -or $expression.Panel.Height -le 40 -or $testSections[0].Expanded) { throw '表情分组展开失败。' }

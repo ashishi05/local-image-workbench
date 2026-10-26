@@ -1,0 +1,178 @@
+{
+  "_readme": "直接编辑本文件即可增删分类和标签；保存后重启工作台生效。key 用不重复的小写英文。",
+  "version": 1,
+  "updated": "2026-10-26",
+  "groups": [
+    {
+      "key": "count",
+      "name": "人数",
+      "items": [
+        { "label": "单人", "text": "1girl, solo" },
+        { "label": "双人", "text": "2girls" },
+        { "label": "三人", "text": "3girls" },
+        { "label": "多人", "text": "multiple girls" },
+        { "label": "群像", "text": "group" },
+        { "label": "男女", "text": "1girl, 1boy" },
+        { "label": "百合", "text": "yuri, 2girls" },
+        { "label": "后宫", "text": "harem, multiple girls, 1boy" }
+      ]
+    },
+    {
+      "key": "haircolor",
+      "name": "发色",
+      "items": [
+        { "label": "黑发", "text": "black hair" },
+        { "label": "棕发", "text": "brown hair" },
+        { "label": "金发", "text": "blonde hair" },
+        { "label": "白发", "text": "white hair" },
+        { "label": "银发", "text": "silver hair" },
+        { "label": "红发", "text": "red hair" },
+        { "label": "粉发", "text": "pink hair" },
+        { "label": "紫发", "text": "purple hair" },
+        { "label": "蓝发", "text": "blue hair" },
+        { "label": "绿发", "text": "green hair" },
+        { "label": "橙发", "text": "orange hair" },
+        { "label": "渐变发", "text": "gradient hair" }
+      ]
+    },
+    {
+      "key": "hairstyle",
+      "name": "发型",
+      "items": [
+        { "label": "长发", "text": "long hair" },
+        { "label": "短发", "text": "short hair" },
+        { "label": "中长发", "text": "medium hair" },
+        { "label": "双马尾", "text": "twintails" },
+        { "label": "马尾", "text": "ponytail" },
+        { "label": "丸子头", "text": "hair bun" },
+        { "label": "麻花辫", "text": "braid" },
+        { "label": "卷发", "text": "wavy hair, curly hair" },
+        { "label": "直发", "text": "straight hair" },
+        { "label": "齐刘海", "text": "blunt bangs" },
+        { "label": "空气刘海", "text": "see-through bangs" }
+      ]
+    },
+    {
+      "key": "eyecolor",
+      "name": "瞳色",
+      "items": [
+        { "label": "红瞳", "text": "red eyes" },
+        { "label": "蓝瞳", "text": "blue eyes" },
+        { "label": "绿瞳", "text": "green eyes" },
+        { "label": "紫瞳", "text": "purple eyes" },
+        { "label": "金瞳", "text": "yellow eyes" },
+        { "label": "异色瞳", "text": "heterochromia" },
+        { "label": "渐变瞳", "text": "gradient eyes" }
+      ]
+    },
+    {
+      "key": "pose",
+      "name": "姿势",
+      "items": [
+        { "label": "站立", "text": "standing" },
+        { "label": "坐着", "text": "sitting" },
+        { "label": "躺着", "text": "lying, on back" },
+        { "label": "跪着", "text": "kneeling" },
+        { "label": "趴着", "text": "on stomach" },
+        { "label": "蹲着", "text": "squatting" },
+        { "label": "叉腰", "text": "hand on hip" },
+        { "label": "抱臂", "text": "crossed arms" },
+        { "label": "回头", "text": "looking back" },
+        { "label": "伸展", "text": "stretching" }
+      ]
+    },
+    {
+      "key": "scene",
+      "name": "场景",
+      "items": [
+        { "label": "室内", "text": "indoors" },
+        { "label": "室外", "text": "outdoors" },
+        { "label": "白背景", "text": "white background, simple background" },
+        { "label": "床上", "text": "on bed" },
+        { "label": "浴室", "text": "bathroom, shower" },
+        { "label": "海滩", "text": "beach, ocean" },
+        { "label": "森林", "text": "forest, trees" },
+        { "label": "城市", "text": "city, street" },
+        { "label": "教室", "text": "classroom" },
+        { "label": "夜空", "text": "night sky, starry sky" }
+      ]
+    },
+    {
+      "key": "lighting",
+      "name": "光线镜头",
+      "items": [
+        { "label": "逆光", "text": "backlighting" },
+        { "label": "侧光", "text": "side lighting" },
+        { "label": "柔光", "text": "soft lighting" },
+        { "label": "霓虹", "text": "neon lights" },
+        { "label": "烛光", "text": "candlelight" },
+        { "label": "日落", "text": "sunset" },
+        { "label": "黄金时刻", "text": "golden hour" },
+        { "label": "电影光", "text": "cinematic lighting" },
+        { "label": "景深", "text": "depth of field, blurry background" },
+        { "label": "广角", "text": "wide angle" },
+        { "label": "长焦", "text": "telephoto" }
+      ]
+    },
+    {
+      "key": "body",
+      "name": "体型",
+      "items": [
+        { "label": "熟女", "text": "adult woman, mature appearance" },
+        { "label": "筋肉", "text": "muscular, toned, abs, strong" },
+        { "label": "丰满", "text": "curvy, thick thighs, wide hips" },
+        { "label": "纤细", "text": "slim, slender, thin" },
+        { "label": "高挑", "text": "tall, long legs" },
+        { "label": "微胖", "text": "chubby, plump, soft body" },
+        { "label": "肌肉女", "text": "muscular female, abs, toned" },
+        { "label": "兽人", "text": "kemonomimi, animal ears, fangs" },
+        { "label": "鳞片", "text": "scales, dragon tail, claws" }
+      ]
+    },
+    {
+      "key": "clothes",
+      "name": "服装",
+      "items": [
+        { "label": "丝袜", "text": "stockings, thighhighs" },
+        { "label": "泳装", "text": "swimsuit, bikini" },
+        { "label": "兽耳", "text": "animal ears, cat ears, tail" },
+        { "label": "婚纱", "text": "wedding dress, veil" },
+        { "label": "护士", "text": "nurse uniform, nurse cap" },
+        { "label": "修女", "text": "nun, nun habit" },
+        { "label": "长手套", "text": "long gloves, elbow gloves" }
+      ]
+    },
+    {
+      "key": "composition",
+      "name": "构图",
+      "items": [
+        { "label": "特写", "text": "close-up, face focus" },
+        { "label": "全身", "text": "full body, standing" },
+        { "label": "俯视", "text": "from above, looking up" },
+        { "label": "仰视", "text": "from below, looking down" },
+        { "label": "背影", "text": "from behind, back view" },
+        { "label": "自拍", "text": "selfie, phone" },
+        { "label": "躺卧", "text": "lying, on back, on side" },
+        { "label": "侧面", "text": "side view, profile" }
+      ]
+    },
+    {
+      "key": "race",
+      "name": "种族",
+      "items": [
+        { "label": "猫娘", "text": "catgirl, cat ears, cat tail, claws, kemonomimi" },
+        { "label": "狼娘", "text": "wolf girl, wolf ears, wolf tail, fangs, kemonomimi" },
+        { "label": "狐娘", "text": "fox girl, fox ears, fox tail, multiple tails, kemonomimi" },
+        { "label": "兔娘", "text": "bunny girl, rabbit ears, rabbit tail, kemonomimi" },
+        { "label": "羊娘", "text": "sheep girl, sheep ears, horns, fluffy" },
+        { "label": "史莱姆", "text": "slime girl, slime body, translucent body, liquid body" },
+        { "label": "人马", "text": "centaur, horse body, hooves" },
+        { "label": "恶魔", "text": "demon, demon horns, demon tail, bat wings" },
+        { "label": "天使", "text": "angel, angel wings, halo, white feathers" },
+        { "label": "幽灵", "text": "ghost, transparent body, floating, pale" },
+        { "label": "AI娘", "text": "android, holographic, digital, glowing" },
+        { "label": "人鱼", "text": "mermaid, mermaid tail, fish tail, scales" }
+      ]
+    }
+  ]
+}

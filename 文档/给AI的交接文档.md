@@ -617,6 +617,16 @@ Get-Content '<APP>\jobs\<id>\worker.stderr.log' -Tail 40
 
 ### 14.3 预设
 
+预设分类现在优先来自 `QwenImageApp\预设库.json`（人类可直接编辑，GUI 启动时加载；文件缺失或解析失败才回退到脚本内置）。格式：
+
+```json
+{ "key": "season", "name": "季节", "items": [ { "label": "春天", "text": "spring, cherry blossoms" } ] }
+```
+
+`key` 必须小写英文且不重复；`items[].text` 是拼进提示词的英文。界面「管理预设」仍会把改动写到 `preset_library_changes.json`，与 `预设库.json` 叠加。
+
+### 14.3.1 旧版预设覆盖
+
 `preset_library_changes.json`：
 
 ```json
