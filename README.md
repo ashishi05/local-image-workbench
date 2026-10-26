@@ -2,6 +2,8 @@
 
 简体中文 | [English](README.en.md)
 
+维护者：ashishi05 · 个人非官方项目
+
 Windows 桌面文生图 / 图生图工具，生成交给本机 ComfyUI，图片只存本地。**不含模型权重。**
 
 ## 功能

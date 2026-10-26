@@ -2,6 +2,8 @@
 
 [简体中文](README.md) | English
 
+Maintainer: ashishi05 · personal, unofficial project.
+
 A Windows desktop text-to-image / image-to-image tool. Generation is delegated to a local ComfyUI instance; images stay on your machine. **Model weights are not included.**
 
 ## Features
