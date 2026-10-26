@@ -1,0 +1,45 @@
+本地生图工作台 · 个人使用许可 v1.0
+
+版权所有 (c) 2026 本地生图工作台 作者。保留所有权利。
+
+作者授予你一项个人、非商业的许可，允许你：
+1. 在本机安装、运行本包中由作者编写的代码与文档；
+2. 修改这些代码与文档，供自己使用；
+3. 将原版或修改版转发给朋友，条件是随附本许可与署名，且不收取费用。
+
+限制：
+4. 不得用于商业目的（销售、付费服务、以营利为目的的产品或服务集成）。商业使用需作者书面许可。
+5. 不得移除或伪造本许可、署名与版权声明。
+6. 本许可仅覆盖作者编写的部分。第三方组件（ComfyUI、Python 包、模型权重、自定义节点等）按各自许可处理；本许可不能替代第三方授权。
+7. 图标如非作者自制，不在本许可范围内。
+
+无担保与责任：
+8. 本软件按“现状”提供，不附带任何明示或默示担保。
+9. 在法律允许的范围内，作者不对使用本软件造成的损失承担责任；但本条不排除依法不得排除的责任，包括故意或重大过失造成的人身损害与财产损失。
+
+终止：
+10. 违反本许可即自动终止；终止后应停止使用并删除副本。
+
+适用：
+11. 本许可仅适用于本地个人使用。如改变运营方式（例如向他人提供在线服务），需重新评估许可与合规义务。
+
+---
+
+Local Image Workbench · Personal Use License v1.0
+
+Copyright (c) 2026 Local Image Workbench Authors. All rights reserved.
+
+You are granted a personal, non-commercial license to install, run, and modify
+the code and documentation written by the authors, and to pass copies (original
+or modified) to friends at no charge, provided this license and attribution
+accompany the copy.
+
+Commercial use requires prior written permission. Third-party components
+(ComfyUI, Python packages, model weights, custom nodes) remain under their own
+licenses; this license does not grant rights to them. Icons not created by the
+authors are excluded.
+
+The software is provided "as is", without warranty of any kind. To the extent
+permitted by law, the authors are not liable for damages arising from its use;
+this does not exclude liability that cannot be excluded by law, including
+intentional or grossly negligent harm to person or property.

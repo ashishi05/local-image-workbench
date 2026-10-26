@@ -1,0 +1,26 @@
+# 运行时与个人数据
+settings.json
+jobs/
+agent_api/
+engine.log
+安装备份/
+*.bak-*
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 模型权重
+*.safetensors
+*.ckpt
+*.gguf
+*.pt
+*.pth
+
+# 生成结果
+output/
+生图/
+*.png
+
+# 临时文件
+*.tmp

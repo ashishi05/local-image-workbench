@@ -1,0 +1,43 @@
+[
+  {
+    "id": "qwen21",
+    "name": "Qwen-Image-2.1 · 标准版（质量优先）",
+    "template": "api_template.json",
+    "diffusion_model": "qwen_image_2.1_int8_convrot.safetensors",
+    "text_steps": 25,
+    "edit_steps": 40,
+    "fixed_sigmas": null
+  },
+  {
+    "id": "qwen21_turbo",
+    "name": "Qwen-Image-2.1 Turbo · 快速版（8步）",
+    "template": "api_template.json",
+    "diffusion_model": "qwen_image_2.1_turbo_int8_convrot.safetensors",
+    "text_steps": 8,
+    "edit_steps": 8,
+    "fixed_sigmas": "1.0, 0.978453, 0.95418, 0.926626, 0.89508, 0.845148, 0.704534, 0.414568, 0"
+  },
+  {
+    "id": "sd35",
+    "name": "SD 3.5 Medium（文生图）",
+    "template": "sd35_template.json",
+    "kind": "sd35",
+    "checkpoint": "sd3.5_medium.safetensors",
+    "text_steps": 28,
+    "edit_steps": 28,
+    "text_cfg": 4.5,
+    "prefix": "SD35/App",
+    "fixed_sigmas": null
+  },
+  {
+    "id": "zimage",
+    "name": "Z-Image（文生图）",
+    "template": "zimage_template.json",
+    "kind": "zimage",
+    "diffusion_model": "z_image_int8_convrot.safetensors",
+    "text_steps": 30,
+    "edit_steps": 30,
+    "text_cfg": 4.0,
+    "fixed_sigmas": null
+  }
+]
